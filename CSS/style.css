@@ -1,0 +1,433 @@
+
+/*
+Regra é um conjunto de propriedades agrupadas em torno de uma tag,
+classe ou ID
+Propriedades permitem alterar comportamentos de tags, aplicando valores
+de acordo com a sua especialidade
+A propriedade é composta pelo "nome-da-propriedade:valor;"
+O espaçamento dado é chamado de identação
+*/
+
+/*CSS reset
+* é um caracter curinga que representa todas as tags*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+
+*{
+    margin: 0px; /*margem extera*/
+    padding: 0px; /*margem interna*/
+    box-sizing: border-box;     /*Considera 100% como o todo */
+}
+
+
+/*FORMAAÇÃO DAS TAGS PRINCIPAIS*/
+
+/*redefine o tamanho da fonte root para facilitar o cálculo em REM*/
+html{
+    font-size: 10px;
+}
+
+body{
+    font-family: Karla
+}
+
+
+h1{
+    color: #343a40;
+    border-bottom: 2px solid #aaa;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    font-size: 4.8rem;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+h2{
+    font-size: 2.8rem;
+    color: #343a40;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+h3{
+    font-size: 2.3rem;
+    color: #343a40;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+p{
+    font-size: 1.8rem;  /*1.8 rem equivale a 18 pixels*/
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 150%;  /*alterar o espaçamento entre as linhas*/
+}
+
+
+/*FORMATAÇÃO DO CABEÇALHO*/
+
+header{
+    background-color: #343a40;
+    padding: 10px 20px 10px 20px;  /*top right bottom left*/
+    
+}
+
+/*formata a tag <a> que está dentro de <header>*/
+header a{
+    color: #fff; /* cor da fonte ou da letra */
+    text-transform: uppercase; /* caixa alta */
+    text-decoration: none; /* tira o underline */
+    padding-left: 15px; /*mergem interna esquerda de cada <a> */
+    font-weight: bold; /* coloca negrito na palavra */ 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+}
+
+header a:hover{
+    text-decoration: underline;
+}
+
+nav img{
+    border-radius: 10px;        /*arrdondamento dos cantos*/
+}
+
+nav{
+    width: 1366px;
+    margin: 0px/*cima*/ auto/*direita*/ 0px/*baixo*/ auto/*esquerda*/; /* centraliza */
+    display: flex;       /*muda para flexbox*/
+    justify-content: space-between; /*distribuir para as margens extremas*/
+    align-items: center;  /*alinha vericalmente*/ 
+}
+
+
+/*FORMATAÇÃO DA SEÇÃO DA IMAGEM DO CABEÇALHO*/
+
+/*para criar classes no CSS, usa-se o (.) mais o nome da classe*/
+.imagem_cabeçalho img{
+    width: 100%;
+    
+}
+
+/*FORMATAÇÃO DA PÁGINA INICIAL*/
+main{
+    width: 1366px;
+    margin: 0px auto 50px auto; /* centraliza */
+    min-height: 1000px;
+    
+}
+
+.cards_home{
+    margin-top: 50px;   /*margem superior*/
+    margin-bottom: 50px;    /*margem inferior*/
+    display: flex;   /*Ativa o modo flexbox*/
+    flex-wrap: wrap;    /*Quebra*/
+    justify-content: space-between; /*distribui o espaço entre os elementos*/
+
+
+}
+
+.card{
+    width: 31%;     /*largura do card*/
+    margin-bottom: 30px;    /*espaçamento inferior*/
+    border: 1px solid #bbb;     /*largura, estilo da linha e cor*/
+    border-radius: 8px;
+    text-align: center;     /*centraliza o texto*/
+   
+}
+
+.card h3, .card p{
+    margin: 5px;
+}
+.card img{
+    width: 100%;
+    border-radius: 8px 8px 0px 0px;     /*arredondar os cantos superiores*/
+}
+
+/*FORMATAÇÃO DO RODAPÉ*/
+
+footer{
+    font-size: 1.6rem;
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0px;
+}
+
+footer .footer_content{ /*comportamento padrão do link*/
+    width: 1366px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer_social a{
+    color: #fff;
+    font-size: 2.3rem;
+    margin: 5px;
+}
+.footer_social a:hover{     /*Quando passar o mouse sobre*/
+    color: #007bff;
+    
+}
+
+/*FORMATAÇÃO DA PÁGINA EMPRESA*/
+article li{
+    font-size: 1.8rem;
+    line-height: 150%;
+}
+
+article ul, article ol{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+article{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+article div:first-child{
+    width: 55%;
+    margin-right: 40px;
+}
+
+article div:last-child{
+    width: 45%;
+}
+
+article div img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+
+
+/*FORMATAÇÃO DA PÁGINA FOTOS*/
+
+.galeria_destaque{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px 15px 0px;
+    background-color: #333;
+    border-radius: 20px;    
+}
+
+
+.galeria_destaque img{
+    width: 60%;
+
+}
+
+
+.galeria_miniaturas{
+    display: flex;
+    justify-content: space-between;
+}
+
+.galeria_miniaturas img{
+    width: 130px;
+    border-radius: 9px;
+}
+
+
+.galeria_miniaturas img:hover{
+    cursor: pointer;
+}
+
+
+
+
+/*FORMATAÇÃO DE TABELAS*/
+
+table{
+    width: 100%;
+    border-collapse:collapse; /*Retirar o espaçamento da tabela*/
+}
+
+
+th, td{
+    font-size: 1.8rem;
+    text-align: start;
+    padding: 10px;
+
+}
+
+
+th:nth-child(3),
+td:nth-child(3){
+    text-align: end;
+}
+
+
+th:nth-child(4),
+td:nth-child(4){
+    text-align: center;
+}
+
+
+
+.Tabela1 td{
+    border: 2px solid #aaa;
+    
+}
+
+.Tabela2 th{
+    border-bottom: 3px solid #333;
+}
+
+.Tabela2 td{
+    border-bottom: 1px solid #bbb;
+}
+
+.Tabela3 tr:nth-child(odd){         /*ODD = ímpar   EVEN = par*/
+    background-color: #ccc;
+}
+
+.Tabela3 th{
+    background-color: #333;
+    color: #fff;
+}
+
+
+/*FORMATAÇÃO DO FORMULÁRIO*/
+
+/* # indica a formatação de um id */
+
+#form1{
+    font-size: 1.8rem;
+    
+}
+
+
+#form1 div{
+    margin-top: 15px; 
+}
+
+#form1 label{
+    display: block; /* a tag label é inline, então altero para bloco*/
+    text-transform: uppercase;
+
+}
+
+#form1 input[type=text], 
+#form1 input[type=email], 
+#form1 textarea{
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+    width: 50%;
+    background-color: rgba(111, 67, 194, .15);
+}
+
+
+#form1 select{
+    padding: 8px;
+    border: 1px solid #bbb;
+    border-radius: 7px;
+}
+
+#form1 input[type=submit]{
+    border-style: none;
+    background-color: #6f43c2;
+    border-radius: 7px;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#form1 input[type=submit]:hover{
+    background-color: #fff;
+    color: #6f43c2;
+
+}
+
+#form1 [id=estado]{
+    background-color: rgba(111, 67, 194, .15);
+}
+
+
+/*Media queries*/
+@media screen and (max-width:1000px) {
+   nav{
+    width: 100%;
+    display: block; /* tira o flex e volta o bloco*/
+     }
+
+     nav span{
+        display: block;
+    }
+
+     nav span:last-child{
+        margin-top: 10px; /*alterar a margem superior*/
+    }
+
+    header{
+        text-align: center;
+    }
+
+    header img{
+        width: 50%;
+    }
+
+    main{
+        width: 100%;
+        padding: 10px;
+    }
+
+    footer .footer_content{ /*comportamento padrão do link*/
+        width: 1366px;
+    }
+
+    .cards_home{
+        display: flex;   /*Ativa o modo flexbox*/
+        flex-direction: column;
+    }
+    
+    .card{
+        width: 100%;     /*largura do card*/
+    }    
+
+    h1{
+        font-size: 2.4rem; 
+    }
+
+    article{
+        flex-direction: column-reverse;   
+    }
+    
+    article div:first-child{
+        width: 100%;
+        margin-right: 0px;
+    }
+    
+    article div:last-child{
+        width: 100%;
+    }
+    
+    .galeria_miniaturas{
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        column-gap: 1%;       /*espaçamento entre as colunas*/
+        row-gap: 5px;       /*espaçamento entre as colunas*/
+    }
+
+    .galeria_miniaturas img{
+        width: 24%;
+        border-radius: 9px;
+    }
+
+    iframe, video{
+        width: 100%;
+        height: 500px;
+    }
+
+    #form1 input[type=text], 
+#form1 input[type=email], 
+#form1 textarea{
+    width: 100%;
+    background-color: rgba(111, 67, 194, .15);
+}
+
+}
